@@ -1,7 +1,7 @@
 export class C {
 
     calc(k: number, p: number, t: number): number {
-        return k * p * t / 36000;
+        return Math.round(k * p * t / 36000);
     }
 
 }
