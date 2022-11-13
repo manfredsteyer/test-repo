@@ -1,9 +1,8 @@
 export class B {
     data: unknown;
 
-    init(): void {
-        fetch('http://whatever')
-            .then(r => r.json())
-            .then(r => this.data = r);
+    async init(): Promise<void> {
+        const r = await fetch('http://whatever');
+        const data = await r.json();
     }
 } 
